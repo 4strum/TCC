@@ -1,0 +1,627 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+  --app-bg: #101827;
+  --sidebar: rgba(21, 30, 47, 1);
+  --sidebar-main-color: #fff;
+  --table-border: #1a2131;
+  --table-header: #1a2131;
+  --app-content-main-color: #fff;
+  --sidebar-link: #fff;
+  --sidebar-active-link: #1d283c;
+  --sidebar-hover-link: #1a2539;
+  --action-color: #2869ff;
+  --action-color-hover: #6291fd;
+  --app-content-secondary-color: #1d283c;
+  --filter-reset: #2c394f;
+  --filter-shadow: rgba(16, 24, 39, 0.8) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  min-height: 100vh;
+}
+
+body {
+    overflow: hidden;
+    font-family: "Poppins", sans-serif;
+    background-color: var(--app-bg);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .app-container {
+    border-radius: 4px;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    max-width: 1280px;
+    display: flex;
+    overflow: hidden;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    max-width: 2000px;
+    margin: 0 auto;
+  }
+
+  /* CONTAINER DE CONSULTA*/
+
+.itemrowcons{
+    border-radius: 4px;
+  }
+  
+  .itemrowcons:hover {
+    box-shadow: var(--filter-shadow);
+    background-color: rgba(16, 24, 39, 0.8);
+  }
+
+
+  .itemrowcons svg{
+    justify-self: center;
+    width: 20px;
+  }
+  
+.tableviewcons{
+  width: 98%;
+    color: #fff;
+    color: var(--app-content-main-color);
+    font-size: 15px;
+    border-radius: 2px;
+    text-align: center;
+    background-color: var(--app-content-secondary-color);
+    box-shadow: rgba(255, 255, 255, 0.118) 0px 7px 15px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    border: 1px solid #101827;
+  }
+  
+  .tableheadercons th{
+    font-size: 15px;
+    padding: 8px 16px;
+    text-align: center;
+    background-color: var(--sidebar-hover-link);
+  }
+  
+  .tableheadercons{
+    border-radius: 4px;
+    background-color: var(--app-content-secondary-color);
+    position: sticky;
+    top: 20px;
+    border: 1px solid #101827;
+  }
+
+/*TABELA RELATORIO*/
+.form-container-relatorio {
+  max-width: none;
+  width: 88%;
+  padding: 20px;
+  background-color: var(--app-content-secondary-color);
+  border-radius: 8px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  color: #fff;
+  display: flex;
+  flex-direction: row; /* Alterado para linha */
+  justify-content: space-around; /* Centraliza os itens horizontalmente */
+  align-items: center; /* Alinha os itens verticalmente */
+  flex-wrap: wrap; /* Caso os elementos não caibam na largura */
+}
+
+.form-container-relatorio  {
+  overflow-y: scroll;
+}
+
+/* Estilizar os labels */
+.form-container-relatorio label{
+  flex: 1; /* Ocupa o espaço disponível */
+  padding: 8px; /* Adiciona margem entre os labels e inputs */
+}
+
+/* Estilizar os inputs e selects */
+.form-container-relatorio input,
+.form-container-relatorio select,
+.form-container-relatorio button {
+  flex: 1; /* Ocupa o espaço disponível */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-left: -40px;
+  max-width: 300px;
+  max-height: 50px;
+}
+
+/* Estilizar o botão */
+.form-container-relatorio button {
+  flex: 1; /* Ocupa o espaço disponível */
+  margin-top: 0px; /* Adiciona margem superior */
+  background-color: var(--action-color);
+  color: #fff;
+  margin-left: 200px;
+  opacity: 0.8;
+  border: none;
+  border-radius: 5px;
+  padding: 1rem 1.2rem;
+  cursor: pointer;
+  transition: 0.4s;
+  max-width: 150px;
+}
+
+.form-container-relatorio button[type="submit"]:hover {
+  opacity: 1;
+  background-color: var(--action-color-hover);
+  color: #1a2131;
+}
+
+
+.itemrowconsrel{
+  overflow-y: scroll;
+  border-radius: 4px;
+}
+
+.itemrowconsrel:hover {
+  box-shadow: var(--filter-shadow);
+  background-color: rgba(16, 24, 39, 0.8);
+}
+
+
+.itemrowconsrel svg{
+  justify-self: center;
+  width: 20px;
+}
+
+.tableviewconsrel{
+  width: 100%;
+  color: #fff;
+  color: var(--app-content-main-color);
+  font-size: 15px;
+  border-radius: 2px;
+  text-align: center;
+  background-color: var(--app-content-secondary-color);
+  box-shadow: rgba(255, 255, 255, 0.118) 0px 7px 15px -5px,
+  rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  border: 1px solid #101827;
+  overflow-y: scroll; 
+  height: 200px;
+}
+
+.tableheaderconsrel th{
+  font-size: 15px;
+  padding: 8px 16px;
+  text-align: center;
+  background-color: var(--sidebar-hover-link);
+}
+
+.tableheaderconsrel{
+  border-radius: 4px;
+  background-color: var(--app-content-secondary-color);
+  position: sticky;
+  border: 1px solid #101827;
+  top: -20px;
+}
+
+  /*BARA DE MENUS LATERAL*/
+
+  .wizardimg {
+    width: 100px;
+    align-self: center;
+  }
+
+  .sidebar {
+    flex-basis: 200px;
+    max-width: 200px;
+    flex-shrink: 0;
+    background-color: var(--sidebar);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+  .sidebar-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar-list-item {
+    position: relative;
+    margin-bottom: 4px;
+  }
+  
+  .sidebar-list-item a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px 16px;
+    color: var(--sidebar-link);
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  
+  .sidebar-list-item svg {
+    margin-right: 8px;
+  }
+  
+  .sidebar-list-item:hover {
+    background-color: var(--sidebar-hover-link);
+  }
+  
+  .sidebar-list-item.active {
+    background-color: var(--sidebar-active-link);
+  }
+  
+  .sidebar-list-item.active:before {
+    content: "";
+    position: absolute;
+    right: 0;
+    background-color: var(--action-color);
+    height: 100%;
+    width: 4px;
+  }  
+
+  
+.submenu {
+    display: none;
+    list-style: none;
+    margin-left: 20px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .sidebar-list-item:hover .submenu {
+    display: block;
+  }
+  
+  .account-info {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    margin-top: auto;
+  }
+  
+  .account-info-picture {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  
+  .account-info-picture img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+  
+  .account-info-name {
+    font-size: 14px;
+    color: var(--sidebar-main-color);
+    margin: 0 8px;
+    overflow: hidden;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .account-info-more {
+    color: var(--sidebar-main-color);
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    margin-left: auto;
+    font-size: 16px;
+    line-height: 24px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+
+/* CONTAINER GERAL DE TODOS */
+  .app-content {
+    padding: 16px;
+    background-color: var(--app-bg);
+    height: 100%;
+    flex: 1;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .app-content-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .app-content-headerText {
+    color: var(--app-content-main-color);
+    font-size: 24px;
+    line-height: 32px;
+  }
+  
+  .form-container {
+    max-width: none;
+    width: 100%;
+    padding: 20px;
+    background-color: var(--app-content-secondary-color);
+    border-radius: 8px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    color: #fff;
+}
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+label {
+    margin-bottom: 5px;
+    width: calc(50% - 5px); /* Metade da largura menos a margem entre os elementos */
+}
+input{
+  color: #101827;
+  opacity: 0.8;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  max-width: 200px;
+  padding: 0.4rem;
+  cursor: pointer;
+  align-items: flex-end;
+  transition: 0.4s;
+  margin: 0 auto;
+  margin-right: 0px;
+  margin-bottom: 5px;
+}
+
+select {
+  color: #101827;
+  opacity: 0.8;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0.4rem;
+  cursor: pointer;
+  transition: border-color 0.4s;
+  margin-bottom: 5px;
+  max-width: 193px; /* Metade da largura menos a margem entre os elementos */
+  width: 100%;
+}
+
+#estado{
+  margin-right: 20px;
+}
+
+#tipo{
+  margin-left: 40px;
+}
+
+
+button {
+  margin-top: 20px;
+  background-color: var(--action-color);
+  color: #fff;
+  opacity: 0.8;
+  border: none;
+  border-radius: 5px;
+  padding: 1rem 1.2rem;
+  max-width: 300px;
+  cursor: pointer;
+  transition: 0.4s;
+  max-height: 50px;
+  margin-left: 60%;
+}
+
+button[type="submit"]:hover {
+  opacity: 1;
+  background-color: var(--action-color-hover);
+  color: #1a2131;
+}
+
+.buttonNot {
+  max-width: 65px;
+  margin-left: -15px;
+  margin-top: -48px;
+  background-color: red;
+  color: #fff; /* Adicionando cor ao texto */
+  border: none; /* Removendo borda */
+  border-radius: 5px; /* Adicionando borda arredondada */
+  padding: 1rem 1.4rem; /* Adicionando preenchimento */
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.buttonNot:hover {
+  opacity: 0.8; /* Diminuindo a opacidade no hover */
+  background-color: darkred; /* Alterando a cor no hover */
+}
+
+.buttonBack {
+  margin-left: 15px;
+  margin-top: -45px;
+  background-color: red;
+  color: #fff; /* Adicionando cor ao texto */
+  border: none; /* Removendo borda */
+  border-radius: 5px; /* Adicionando borda arredondada */
+  padding: 1rem 1.8rem; /* Adicionando preenchimento */
+  cursor: pointer;
+  transition: 0.4s;
+  height: 45px;
+}
+
+.buttonBack:hover {
+  opacity: 0.8; /* Diminuindo a opacidade no hover */
+  background-color: darkred; /* Alterando a cor no hover */
+}
+
+h1{
+  color: #fff;
+}
+
+#buttonNot{
+  margin-left: 15px;
+  background-color: red;
+}
+
+.fa-solid{
+  color: #fff;
+  margin-right: 5px;
+}
+
+#fk_id_usuario{
+  margin-right: -43px;
+}
+
+#dt_emprestimo{
+  width: 193px;
+}
+
+ 
+#cidade{
+  margin-right: -43px;
+}
+
+.cidade{
+  margin-right: -43px;
+}
+
+#estado{
+  margin-right: 0px;
+}
+
+
+#register-container {
+  max-width: 900px;
+  min-height: 80vh;
+  margin: 2rem auto;
+  display: flex;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+      rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+#register-banner {
+  background: url('bg.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 50%;
+}
+
+#banner-layer {
+  background-color: rgba(25, 11, 122, 0.5);
+  height: 100%;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+#register-banner h1 {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+  word-spacing: 50rem;
+}
+
+#register-form {
+  background-color: #fdfdfd;
+  padding: 2rem;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#register-form h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2.2rem;
+}
+
+#register-form p {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #aaa;
+  font-size: 0.8rem;
+  align-items: center;
+}
+
+form-control {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center; /* Alinhar itens verticalmente */
+}
+
+.form-control label {
+  font-weight: bold;
+  margin-right: 1rem; 
+  margin-bottom: -100px;
+  margin-top: 20px;
+}
+
+.form-control input {
+  border: none;
+  border-bottom: 1px solid #aaa;
+  padding: 0.1rem 0;
+  max-width: 300px;
+  margin-top: 20px;
+}
+
+#register-form button[type="submit"]{
+  background-color: #1d283c;
+  margin-top: 20px;
+  margin-left: 80px;
+  color: #fff;
+  opacity: 0.8;
+  border: none;
+  border-radius: 1rem;
+  padding: 1rem 1.4rem;
+  max-width: 150px;
+  cursor: pointer;
+  align-items: center;
+  transition: 0.4s;
+  margin-bottom: 20px; /* Adicionado para espaçamento do botão */
+  align-self: center; /* Adicionado para centralizar o botão */
+}
+
+#register-form button[type="submit"]:hover {
+  opacity: 1;
+}
+
+.logo{
+  width: 100px;
+  align-self: center;
+}
+
+.alert {
+  color: #cf0505;
+  padding: 15px;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.green-alert {
+ 
+  color: #028606;
+  font-weight: bold;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+
